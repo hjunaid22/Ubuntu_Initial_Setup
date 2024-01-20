@@ -13,7 +13,6 @@ sudo apt-get install net-tools vim su git curl wget apache2 ca-certificates gnup
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
 ########################################### Installing Docker ########################################
-
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
