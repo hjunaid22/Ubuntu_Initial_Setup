@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "what is the hostname"
+echo "What is the hostname"
 read HOSTNAME
 echo " " > /etc/hostname
 echo "$HOSTNAME" >> /etc/hostname
@@ -8,7 +8,7 @@ echo "alias='ls -al'" >> /etc/profile
 
 ### Installing Applications ###
 sudo apt-get update -y
-sudo apt-get install net-tools vim su git curl wget apache2  -y 
+sudo apt-get install net-tools vim su git curl wget apache2 ca-certificates gnupg -y 
 ### Installing Jellyfin ###
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 ### Installing Docker ####
