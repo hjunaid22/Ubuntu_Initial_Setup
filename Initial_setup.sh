@@ -4,14 +4,16 @@ read HOSTNAME
 echo " " > /etc/hostname
 echo "$HOSTNAME" >> /etc/hostname
 
-echo "alias='ls -al'" >> /etc/profile
+echo "alias 'll=ls -al'" >> /etc/profile
 
-### Installing Applications ###
+########################################## Installing Applications ################################
 sudo apt-get update -y
 sudo apt-get install net-tools vim su git curl wget apache2 ca-certificates gnupg -y 
-### Installing Jellyfin ###
+########################################### Installing Jellyfin ######################################
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
-### Installing Docker ####
+
+########################################### Installing Docker ########################################
+
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
