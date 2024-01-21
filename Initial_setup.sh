@@ -35,3 +35,8 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update -y
+
+######################################## Configuration twiking ##################
+#close the lid and not go to sleep
+echo -e "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
+systemctl restart systemd-logind
