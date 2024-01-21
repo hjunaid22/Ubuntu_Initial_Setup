@@ -40,3 +40,6 @@ sudo apt-get update -y
 #close the lid and not go to sleep
 echo -e "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
 systemctl restart systemd-logind
+#fixing the bio time
+timedatectl
+timedatectl set-local-rtc 1 # this makes the systemctl and real time clock same not recommended
